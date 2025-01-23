@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat Display", serif;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer {
+    width: 65%;
+    min-height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+.column-one, .column-two, .column-three {
+    flex: 1 1 33%;
+    height: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-one {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+
+.icon-sec {
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.text-sec {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.text-sec h2 {
+    font-family: "Big Shoulders Display", serif;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.text-sec p {
+    color: white;
+    font-size: 15px;
+}
+
+.column-two {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.column-three {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+button {
+    background-color: white;
+    width: 100%;
+    max-width: 11rem;
+    height: 3rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-1 {
+    color: hsl(31, 77%, 52%);
+}
+
+.btn-2 {
+    color: hsl(184, 100%, 22%);
+}
+
+.btn-3 {
+    color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 1000px) {
+    .contentContainer {
+        min-width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contentContainer {
+        min-width: 85%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contentContainer {
+        min-width: 88%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .contentContainer {
+        min-width: 65%;
+        flex-direction: column;
+    }
+
+    .column-one, .column-two, .column-three {
+        flex: 1 1 100%; /* Stack columns vertically on small screens */
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Make the button full width on small screens */
+    }
+    .column-one{
+        border-radius: 1rem 1rem 0rem 0rem ;
+    }
+    .column-three{
+        border-radius: 0rem 0rem 1rem 1rem;
+    }
+
+}
